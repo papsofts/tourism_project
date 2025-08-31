@@ -35,8 +35,8 @@ ytrain = pd.read_csv(ytrain_path)
 ytest = pd.read_csv(ytest_path)
 
 # Lets fix the 'Fe Male' data of Gender column into 'Female'
-Xtrain.loc[tour_dataset['Gender'] == 'Fe Male', 'Gender'] = 'Female'
-Xtest.loc[tour_dataset['Gender'] == 'Fe Male', 'Gender'] = 'Female'
+Xtrain.loc[Xtrain['Gender'] == 'Fe Male', 'Gender'] = 'Female'
+Xtest.loc[Xtest['Gender'] == 'Fe Male', 'Gender'] = 'Female'
 
 # List of numerical features in the dataset
 numeric_features= [
